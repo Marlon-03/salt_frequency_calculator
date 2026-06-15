@@ -1,26 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* ── Demi Koi Brand Colors ── */
+  --color-brand-red:        #ED1E26;
+  --color-brand-red-dark:   #b8151b;
+  --color-brand-red-dim:    rgba(237, 30, 38, 0.08);
+  --color-brand-black:      #ffffff;
+  --color-brand-surface:    #f8f8f8;
+  --color-brand-panel:      #fafafa;
+  --color-brand-border:     #e5e5e5;
+  --color-brand-muted:      #d0d0d0;
+  --color-brand-text:       #1a1a1a;
+  --color-brand-text-muted: #666666;
+  --color-brand-success:    #34d399;
+  --color-brand-warning:    #fbbf24;
+  --color-brand-danger:     #f87171;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* ── Fonts ── */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* ── Animations ── */
+  --animate-fade-in:    fadeIn 0.3s ease-out forwards;
+  --animate-ripple-in:  rippleIn 0.35s ease-out forwards;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-6px); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes rippleIn {
+    0%   { opacity: 0; transform: scale(0.92); }
+    60%  { opacity: 1; }
+    100% { opacity: 1; transform: scale(1); }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
+input[type='number'] { -moz-appearance: textfield; }
