@@ -84,7 +84,6 @@ export function ReverseCalculator() {
           </p>
         </div>
 
-        {/* Salt Added */}
         <div className="flex flex-col gap-1.5">
           <label htmlFor="rev-salt" className="text-sm font-medium text-(--color-brand-text-muted)">Salt Added</label>
           <div className={`flex rounded-xl border overflow-hidden bg-(--color-brand-panel) transition-colors ${inputBorder('saltAdded')}`}>
@@ -101,7 +100,6 @@ export function ReverseCalculator() {
           <FieldMsg err={fieldErr('saltAdded')} />
         </div>
 
-        {/* Resulting Salinity */}
         <div className="flex flex-col gap-1.5">
           <label htmlFor="rev-sal" className="text-sm font-medium text-(--color-brand-text-muted)">Resulting Salinity Level</label>
           <div className={`flex rounded-xl border overflow-hidden bg-(--color-brand-panel) transition-colors ${inputBorder('salinityChange')}`}>
@@ -118,7 +116,6 @@ export function ReverseCalculator() {
           <FieldMsg err={fieldErr('salinityChange')} />
         </div>
 
-        {/* Volume display unit */}
         <div className="flex flex-col gap-1.5">
           <p className="text-sm font-medium text-(--color-brand-text-muted)">Show result in</p>
           <div className="flex gap-2">
@@ -141,7 +138,7 @@ export function ReverseCalculator() {
       </div>
 
       {/* ── Result Card ── */}
-      <div className="bg-gradient-to-br from-(--color-brand-surface) to-(--color-brand-black) border border-(--color-brand-border) rounded-2xl p-6 flex flex-col gap-4 relative overflow-hidden">
+      <div className="bg-linear-to-br from-(--color-brand-surface) to-(--color-brand-black) border border-(--color-brand-border) rounded-2xl p-6 flex flex-col gap-4 relative overflow-hidden">
         <div className="absolute -bottom-10 -right-10 w-40 h-40 rounded-full bg-(--color-brand-red)/5 blur-2xl pointer-events-none" />
         <p className="text-xs font-semibold uppercase tracking-widest text-(--color-brand-text-muted)">Estimated Pond Volume</p>
 

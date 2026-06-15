@@ -12,7 +12,6 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-(--color-brand-black) font-sans text-(--color-brand-text) flex flex-col">
 
-      {/* ── Hero ── */}
       <header className="relative overflow-hidden text-center px-6 pt-12 pb-8">
         <div className="absolute inset-0 pointer-events-none"
           style={{ background: 'radial-gradient(ellipse 60% 50% at 50% 0%, rgba(237,30,38,0.12) 0%, transparent 70%)' }}
@@ -51,9 +50,6 @@ export default function Home() {
       {/* ── Footer ── */}
       <footer className="text-center px-6 py-6 border-t border-(--color-brand-border) text-xs text-(--color-brand-text-muted) space-y-1">
         <p>Results are for guidance only. Consult a Koi specialist before treatment.</p>
-        <p className="opacity-50">
-          Salt (kg) = Volume (L) × Δppt ÷ 1000 &nbsp;·&nbsp; 1 gal = 3.78541 L &nbsp;·&nbsp; 1 gal H₂O ≈ 8.34 lbs
-        </p>
       </footer>
     </div>
   );

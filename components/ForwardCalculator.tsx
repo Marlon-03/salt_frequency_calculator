@@ -77,11 +77,9 @@ export function ForwardCalculator() {
 
   return (
     <div className="contents">
-      {/* ── Input Card ── */}
       <div className="bg-(--color-brand-surface) border border-(--color-brand-border) rounded-2xl p-6 flex flex-col gap-5">
         <p className="text-xs font-semibold uppercase tracking-widest text-(--color-brand-text-muted)">Inputs</p>
 
-        {/* Pond Volume */}
         <div className="flex flex-col gap-1.5">
           <label htmlFor="fwd-vol" className="text-sm font-medium text-(--color-brand-text-muted)">
             Pond Volume
@@ -100,7 +98,6 @@ export function ForwardCalculator() {
           <FieldMsg err={fieldErr('volume')} />
         </div>
 
-        {/* Current Salinity */}
         <div className="flex flex-col gap-1.5">
           <label htmlFor="fwd-cur" className="text-sm font-medium text-(--color-brand-text-muted)">
             Current Salinity
@@ -119,7 +116,6 @@ export function ForwardCalculator() {
           <FieldMsg err={fieldErr('currentSalinity')} />
         </div>
 
-        {/* Desired Salinity */}
         <div className="flex flex-col gap-1.5">
           <label htmlFor="fwd-des" className="text-sm font-medium text-(--color-brand-text-muted)">
             Desired Salinity
@@ -138,7 +134,6 @@ export function ForwardCalculator() {
           <FieldMsg err={fieldErr('desiredSalinity')} />
         </div>
 
-        {/* Output unit */}
         <div className="flex flex-col gap-1.5">
           <p className="text-sm font-medium text-(--color-brand-text-muted)">Show result in</p>
           <div className="flex gap-2">
@@ -161,8 +156,8 @@ export function ForwardCalculator() {
       </div>
 
       {/* ── Result Card ── */}
-      <div className="bg-gradient-to-br from-(--color-brand-surface) to-(--color-brand-black) border border-(--color-brand-border) rounded-2xl p-6 flex flex-col gap-4 relative overflow-hidden">
-        <div className="absolute -bottom-10 -right-10 w-40 h-40 rounded-full bg-(--color-brand-red)/5 blur-2xl pointer-events-none" />
+      <div className="bg-linear-to-br from-(--color-brand-surface) to-(--color-brand-black) border border-(--color-brand-border) rounded-2xl p-6 flex flex-col gap-4 relative overflow-hidden">
+        <div className="absolute -bottom-10 -right-10 w-40 h-40 rounded-full bg-brand-red-5 blur-2xl pointer-events-none" />
         <p className="text-xs font-semibold uppercase tracking-widest text-(--color-brand-text-muted)">Salt to Add</p>
 
         {primaryVal !== null && !noSaltNeeded ? (
@@ -177,7 +172,7 @@ export function ForwardCalculator() {
             <div className="flex flex-col gap-2 pt-3 border-t border-(--color-brand-border)">
               <Row label="Also in"        value={saltUnit === 'lbs' ? `${formatNumber(result!.saltKg)} kg` : `${formatNumber(result!.saltLbs)} lbs`} />
               <Row label="Pond volume"    value={`${formatNumber(result!.volumeGallons)} gal / ${formatNumber(result!.volumeLiters)} L`} />
-              <Row label="Salinity delta" value={`+${formatNumber(result!.deltaPpt, 3)} ppt`} />
+              <Row label="Salinity" value={`+${formatNumber(result!.deltaPpt, 3)} ppt`} />
             </div>
 
             <button
