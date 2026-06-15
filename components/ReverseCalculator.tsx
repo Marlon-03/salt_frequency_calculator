@@ -139,7 +139,7 @@ export function ReverseCalculator() {
 
       {/* ── Result Card ── */}
       <div className="bg-linear-to-br from-(--color-brand-surface) to-(--color-brand-black) border border-(--color-brand-border) rounded-2xl p-6 flex flex-col gap-4 relative overflow-hidden">
-        <div className="absolute -bottom-10 -right-10 w-40 h-40 rounded-full bg-(--color-brand-red)/5 blur-2xl pointer-events-none" />
+        <div className="absolute -bottom-10 -right-10 w-40 h-40 rounded-full bg-brand-red/5 blur-2xl pointer-events-none" />
         <p className="text-xs font-semibold uppercase tracking-widest text-(--color-brand-text-muted)">Estimated Pond Volume</p>
 
         {primaryVal !== null ? (
