@@ -19,7 +19,6 @@ export default function Home() {
         <div className="relative flex flex-col items-center gap-4">
           <div>
             <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
-              <span className="text-(--color-brand-red)">Demi Koi</span>{' '}
               <span className="text-(--color-brand-text)">Salt Calculator</span>
             </h1>
             <p className="mt-2 text-(--color-brand-text-muted) text-sm max-w-md mx-auto">
