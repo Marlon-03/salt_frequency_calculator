@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Demi Koi – Pond Salt Calculator',
+  title: 'PondDose – Pond Salt Calculator',
   description: 'Calculate exactly how much salt to add to your Koi pond, or estimate your pond volume from a known salt treatment.',
 };
 

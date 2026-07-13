@@ -2,7 +2,6 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* ── Demi Koi Brand Colors ── */
   --color-brand-red:        #ED1E26;
   --color-brand-red-dark:   #b8151b;
   --color-brand-red-dim:    rgba(237, 30, 38, 0.08);
